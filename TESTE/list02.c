@@ -12,6 +12,5 @@ int main ( void ) {
     return 0;
 }
 
-
 // Primeiramente, uma função chamada f é definida para retornar um valor inteiro resultante de operações em uma matriz 3x3, a qual é passada como parâmetro para a função f. 
 //Em cada linha e coluna dessa matriz, valores inteiros são inseridos. Em seguida, são realizadas algumas operações matemáticas, resultando em um retorno de -5.
