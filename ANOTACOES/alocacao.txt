@@ -1,0 +1,162 @@
+ASSUNTO SOBRE ALOCAÇÃO DE MEMÓRIA
+
+Biblioteca usada é a stdlib;
+
+A função *malloc()* -> é uma funação para alocar memória, ela recebe como parâmetro 
+o número de bytes que se deseja alocar e retornar o endereço inicial que área de memória alocada.
+
+ex:
+    é a alocação dinâmica de um vetor de inteiro com 10 elementos,
+    nesse exemplo, desejamos armazenar valores inteiros nessa área,
+    devemos declarar um ponteiro de inteiro para receber o endereço
+    inicial do espaço alocado, seja vai ser enviado local da memoria do
+    primeir espaço do vetor.
+
+
+- O Uso do operador sizeof() -> vai acabar me especificando o tanto de byts cada tipo de variavel tem
+
+como é usado;
+    v = malloc(10*sizeof(int));
+
+a função malloc retorna um ponteiro genérico, seja para qualquer tipo de variavel
+para não acontecer um erro é bom sempre especificar o tipo da memoria que você espera receber.
+
+o uso:
+    v = (int *) malloc(10*sizeof(int));
+
+
+Um ponto importante é se sua máquina tem espaço suficiente para realizar a alocação
+Então, acabamos usando um representante que é o Símbolo NULL (serve para representar ausência de valores)
+
+então, caso ocorra um erro o NULL é acionado.
+
+como usar; 
+
+v = (int *) malloc(10*sizeof(int));
+if (v == NULL){
+    printf("Memoria insuficiente.\n");
+    Seja, acabou dano um erro no seu programa.
+    exit(1); aborta o programa e retorna 1 para o sist. operaciona, seja quando retornar 1, acaba informando ao sistema que houver um erro
+}
+
+else{
+    printf("DEU TUDO CERTO.")
+}
+
+
+Liberar o espaço da memória alocado;
+
+É usado a função free("aqui dentro vai nomer do vetor ou da variavel em si")
+Essa função recebe como parâmetro o ponteiro da memória a ser liberada.
+
+uso na prática;
+
+free(v);
+
+
+
+->  função relocar().
+
+A função realloc é usada para realocar memória. Ela recebe como parâmetro um ponteiro para um bloco de memória já alocado e um inteiro que representa 
+o novo tamanho do bloco de memória. Usa-se a função realloc quando queremos aumentar ou diminuir o tamanho de um bloco de memória já alocado.
+
+uso;
+
+   vetor =(int *) realloc(vetor, novo_tamanho *sizeof(int));
+
+
+cashe -> é forçar o endereço ser de um tipo
+calloc ->  também reserva um espaço de memória, A diferenciação entre malloc e calloc é que a função calloc inicializa cada posição do vetor com zeros.
+
+
+diferença entre alocamento dinamicamente e estática;
+
+estática -> ocorre em tempo de compilação e o tamanho da memória é determinado durante a fase de compilação do programa.
+O espaço de memória é alocado de uma vez e permanece fixo durante a execução.
+
+ex:
+
+#include <stdio.h>
+
+int main() {
+    // Alocação estática de um array com 5 elementos
+    int numeros[5] = {1, 2, 3, 4, 5};
+
+    // Acesso e impressão dos elementos do array
+    for (int i = 0; i < 5; ++i) {
+        printf("%d ", numeros[i]);
+    }
+
+    return 0;
+}
+
+
+dinamicamente -> Já alocação dinâmica ocorre em tempo de execução, permitindo que o tamanho da memória alocada seja 
+variável e seja determinado durante a execução do programa.
+
+ex: 
+
+int *p = malloc(sizeof(int));  // Exemplo de alocação dinâmica em C
+// Restante do código...
+free(p);  // Libera a memória quando não for mais necessária
+
+
+
+alguns aplicações;
+
+int main(void){
+   int *vetor = malloc(3*sizeof(int)); //a função malloc vai retornar o endereço do primeiro elemento do vetor alocado
+   /* & vetor[2] aqui vai retornar o local de memroia do vetor em casa posição, pode ler tambem dessa forma: (vetor +1) ...*/
+   
+   if(vetor == NULL){
+      printf("ERRO: MEMORIA INSUFICIENTE");
+      exit(1);
+   }
+   free(vetor); // quando o free é executado o espaço de memoria é liberado para uso.
+   return 0;
+
+}
+
+
+int main(void)
+{
+   int tamanho = 5;
+   int *vetor = (int *)malloc(tamanho * sizeof(int));
+   if (vetor == NULL)
+   {
+      exit(1); /*aborta a execução do programa*/
+   }
+   else
+   {
+      printf("Alocação realizada com sucesso\n");
+   }
+
+   /*ler os dados do vetor */
+
+   for (int i = 0; i < tamanho; i++)
+   {
+      printf("Digite o valor da posição %d do vetor:", i);
+      scanf("%d", &vetor[i]); /*outro modelo é usar vetor + contador que tambe diz o local do endereço*/
+   }
+
+   free(vetor); /*liberar a memoria*/
+   return 0;
+}
+
+int main(void)
+{
+   int tamanho = 5, novo_tamanho;
+   int *vetor = (int *) malloc(tamanho * sizeof(int));
+   printf("Entre com o novo tamanho do vetor: ");
+   scanf("%d", &novo_tamanho);
+
+   vetor =(int *) realloc(vetor, novo_tamanho *sizeof(int));
+
+   if(vetor == NULL){
+      printf("erro alocar memória");
+      exit(1);
+   }
+
+   free (vetor);
+   return 0;
+}
