@@ -20,7 +20,7 @@ int main(void){
     /*erro nesse código procurar o motivo de não está alocando a memoria correta. */
     tamanho_do_nome = strlen(nome) + 1;
 
-    nome = (char *) realloc(nome,tamanho_do_nome );
+    nome = (char *) realloc(nome,tamanho_do_nome);
 
     if(nome == NULL){
       printf("Erro ao alocar memória\n");
