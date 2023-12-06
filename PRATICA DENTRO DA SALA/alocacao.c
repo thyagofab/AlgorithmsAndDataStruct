@@ -4,7 +4,7 @@
 
 int main(void){
     int tamanho_do_vetor= 20;
-    int tamanho_do_nome;
+    char tamanho_do_nome;
     char * nome = (char *) malloc(tamanho_do_vetor *sizeof(char)); /*ele inicia com tamanho de 20 caracteres.*/
     if(nome == NULL){
         printf("Erro: memoria insuficiente\n");
@@ -18,13 +18,14 @@ int main(void){
     /*colocando o tamanho de memoria que o nome usa. */
 
     /*erro nesse código procurar o motivo de não está alocando a memoria correta. */
-    tamanho_do_nome = strlen(nome);
-    nome = (char *) realloc(nome, (tamanho_do_nome + 1) * sizeof(char));
+    tamanho_do_nome = strlen(nome) + 1;
+
+    nome = (char *) realloc(nome,tamanho_do_nome );
 
     if(nome == NULL){
       printf("Erro ao alocar memória\n");
       exit(1);
-   }
+}
 
     printf("ola %s \n", nome);
 
