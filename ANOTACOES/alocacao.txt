@@ -60,6 +60,8 @@ free(v);
 A função realloc é usada para realocar memória. Ela recebe como parâmetro um ponteiro para um bloco de memória já alocado e um inteiro que representa 
 o novo tamanho do bloco de memória. Usa-se a função realloc quando queremos aumentar ou diminuir o tamanho de um bloco de memória já alocado.
 
+seja aumenta ou diminuir o espaço da memoria usada.
+
 uso;
 
    vetor =(int *) realloc(vetor, novo_tamanho *sizeof(int));
@@ -118,6 +120,8 @@ int main(void){
 }
 
 
+
+
 int main(void)
 {
    int tamanho = 5;
@@ -143,6 +147,8 @@ int main(void)
    return 0;
 }
 
+
+
 int main(void)
 {
    int tamanho = 5, novo_tamanho;
@@ -160,3 +166,36 @@ int main(void)
    free (vetor);
    return 0;
 }
+
+
+Declarando um vetor em uma função 
+
+(*vetor+1) -> você está acessando o espaço da memoria e adicionando mais um
+
+
+Implementação em função;
+
+float media(int tamanho_do_vetor, int *vetor(passar o vetor pode ser dessa forma para acessar o endereço do prinmeiro elemento e ter acesso aos demais.)){
+   int soma = 0;
+   int contador;
+
+   for (contador = 0; contador = tamanho; contador++ ){
+      soma += vetor[contador];
+            *(vetor + contador); funcionado do mesmo jeito de cima.
+   }
+
+   return soma/tamanho;
+}
+
+int main(void){
+
+}
+
+Declarando Matrizes
+
+declarando uma matriz:
+
+int matriz[2][2];
+
+matriz{{0,1},{3,2}};
+   
