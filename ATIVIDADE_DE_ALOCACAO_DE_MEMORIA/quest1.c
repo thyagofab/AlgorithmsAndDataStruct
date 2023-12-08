@@ -61,6 +61,5 @@ int main(void){
     free(vetor_de_resposta_do_tipo_de_sexo);
     free(vetor_de_opinioes);
     return 0;
-    
 
 }
