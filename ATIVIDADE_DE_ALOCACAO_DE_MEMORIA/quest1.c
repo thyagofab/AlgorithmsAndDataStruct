@@ -29,6 +29,8 @@ int main(void){
         "1- Masculino  2- Feminino: ",i+1);
         scanf("%d",&vetor_de_resposta_do_tipo_de_sexo[i]);
 
+        printf("------------------------------------\n");
+
         printf("DIGITE A OPINIAO SOBRE PRODUTO %d -> "
         "1 - GOSTOU  2 - NÃO GOSTOU: ",i+1);
         scanf("%d",&vetor_de_opinioes[i]);
