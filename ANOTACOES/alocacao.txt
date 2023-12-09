@@ -195,7 +195,11 @@ Declarando Matrizes
 
 declarando uma matriz:
 
-int matriz[2][2];
+int matriz[i][j];
 
-matriz{{0,1},{3,2}};
-   
+
+i -> representa as linhas 
+j -> representa as colunas 
+
+quando declaro uma **matriz -> esse dois aterisco quer dizer que estou declarando um ponteiro para outro ponteiro 
+pois quando  alocar memória para cada linha individual e, em seguida, armazenar um ponteiro para a primeira posição de cada linha.
