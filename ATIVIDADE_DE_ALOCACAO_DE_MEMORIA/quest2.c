@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 
+
+/*terminar o resto do codigo ainda que faltar receber respostas de 10 alunos e dar % dela*/
 int resultado(char *gabarito, char *resposta_do_aluno,int total_de_questoes){
     int total_de_acertos = 0;
 
@@ -22,7 +24,7 @@ int main(void)
     int total_de_questoes;
     int total_de_acertos = 0;
 
-    
+
     printf("DIGITE O TOTAL DE QUESTÕES: ");
     scanf("%d", &total_de_questoes);
 
