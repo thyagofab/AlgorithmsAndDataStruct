@@ -2,8 +2,6 @@
 #include <stdlib.h>
 
 
-
-
 float  porcentagem (float a, float b){
     return (a / b) * 100;
 }
@@ -33,7 +31,7 @@ int main(void){
         exit(1);
     }
 
-
+    
     for (int i = 0; i < tamanho_do_vetor; i++){
 
         printf("------------------------------------\n");
@@ -70,11 +68,11 @@ int main(void){
 
 
     printf("O TOTAL DE PESSOAS QUE RESPONDERAM A PESQUISA FOI: %d\n",tamanho_do_vetor);
-    printf("A PROCENTAGEM DE PESSOAS DO SEXO FEMININO QUE GOSTARAM DO PRODUTO FOI: %.2f PORCENTO\n", porcentagem_de_pessoas_do_sexo_feminino_que_gostaram);
-    printf("A PROCENTAGEM DE PESSOAS DO SEXO MASCULINO QUE NÃO GOSTARAM DO PRODUTO FOI: %.2f PORCENTO\n", porcentagem_de_pessoas_do_sexo_masculino_que_nao_gostaram);
+    printf("A PROCENTAGEM DE PESSOAS DO SEXO FEMININO QUE GOSTARAM DO PRODUTO FOI: %.2f %%\n", porcentagem_de_pessoas_do_sexo_feminino_que_gostaram);
+    printf("A PROCENTAGEM DE PESSOAS DO SEXO MASCULINO QUE NÃO GOSTARAM DO PRODUTO FOI: %.2f %%\n", porcentagem_de_pessoas_do_sexo_masculino_que_nao_gostaram);
 
     free(vetor_de_resposta_do_tipo_de_sexo);
     free(vetor_de_opinioes);
     return 0;
 
-}
+} 

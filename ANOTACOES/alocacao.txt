@@ -203,3 +203,108 @@ j -> representa as colunas
 
 quando declaro uma **matriz -> esse dois aterisco quer dizer que estou declarando um ponteiro para outro ponteiro 
 pois quando  alocar memória para cada linha individual e, em seguida, armazenar um ponteiro para a primeira posição de cada linha.
+
+
+
+usando uma matriz;
+
+declarando uma matriz; 
+
+char **alunos = (char**) malloc(alunos*sizeof(char*)) // cada linha é os alunos aloquei as linhas
+
+alocando as colunas
+
+
+//verificando as colunas
+for(int = 0; i < alunos; i++){
+   *alunos[i] = (char*) malloc(n*sizeof(char*)) //
+
+   if (alunos[i]== NULL){
+      exit[1]
+   }
+}
+
+
+lendo os dados;
+
+for(i = 0; i<n; i++){//representa as linhas quantidade de alunos 
+   printf("aluno %d", i+1);
+   for (j = 0; j<n; j++){
+      printf("insira a resposta da %d questao", j+1)
+   } //é as repostas dos alunos separadamente 
+}
+
+
+
+ctr + d // para alterar tudo de uma vez só os nomes de algum coisa 
+
+clocando em uma fução;
+
+
+para passar uma matriz só colcocar **
+
+void saida(char *gabarito, char **alunos, int quantidade_de_questao){
+   float nota = 0;
+   float acerto = 0;
+   float aprovado = 0;
+
+   for (int i = 0; i < alunos; i++){
+      nota = 0
+      acerto = 0
+      for(int j = 0; j < n; j++){
+         if(aluno[i][j] == gabarito[j]){ /posiçao j, pois vai verificar as colunas que está as repostas.
+            acerto ++
+         }
+      }
+   }
+
+   nota = acertos *10/n;
+   printf("aluno %d\n Nota: %.2f", i +1);
+
+   if (nota == 6){
+      aorivadis ++;
+   }
+
+   printf("aprovados %% %2.f ", (float)(aprovados/alunos)*100);
+}
+
+
+passando os argumentos;
+
+saida(gabarito, alunos, n);
+
+
+
+o free em matriz
+
+free (gabarito);
+
+for (i = 0; i < alunos; i++){
+   free(gabarito[i])
+}
+
+
+
+alocação de struck;
+
+
+struck nos permite agrupar dados destintos em unico espaço de memoria 
+
+modelo:
+
+
+struck nome {
+
+};
+
+
+
+criando um ponteiro por struct
+
+
+struct aluno *estudante = (struct aluno*) malloc (sizeof(struct aluno));
+
+
+usando uma função;
+
+
