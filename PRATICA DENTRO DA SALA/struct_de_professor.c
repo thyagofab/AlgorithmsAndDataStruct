@@ -25,9 +25,13 @@ void preenche(struct professor *prof){ //nao vai me retornar nada, pois só vai 
 }
 
 void imprimir (struct professor *prof){
-    printf("nome: %s \n Idade: %d\n  Matricula:  %d \n Email: %s", prof -> nome, prof -> idade, prof -> mat, prof -> email);
 
+    printf("nome: %s\n", prof ->nome);
+    printf("idade: %d\n", prof ->idade);
+    printf("matricula: %ld\n", prof ->mat);
+    printf("email: %s\n", prof ->email);
 }
+
 
 
 

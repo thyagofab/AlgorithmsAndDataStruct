@@ -11,6 +11,8 @@ int main(void){
         exit(1);
     }
 
+
+
     printf("DIGITE SEU NOME: ");
     scanf("%[^\n]",nome);/*isso serve enquanto o usuario não apertar entrre o não para de pegar o texto e já diferente do %s se apertar espaço vai parar de parar de pegar a string que está digitando*/
     /*o proprio nome é o endereço.*/
