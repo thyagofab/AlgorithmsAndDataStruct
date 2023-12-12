@@ -1,39 +1,63 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define ALUNOS 10
 
-float resultado(char *gabarito, char *resposta_do_aluno, int total_de_questoes, float nota)
+void resultado(char *gabarito, char **alunos, int total_de_questoes)
 {
-    int total_de_acertos = 0;
+    float nota = 0;
+    float acertos = 0;
+    float aprovados = 0;
 
-    for (int i = 0; i < total_de_questoes; i++)
+    printf("----------NOTAS DOS ALUNOS----------\n");
+    for (int i = 0; i < ALUNOS; i++)
     {
-        if (gabarito[i] == resposta_do_aluno[i])
+        nota = 0;
+        acertos = 0;
+        for (int j = 0; j < total_de_questoes; j++)
         {
-            total_de_acertos++;
+            if (alunos[i][j] == gabarito[j])
+            {
+                acertos++;
+            }
         }
-        nota =(float)(10.0/total_de_questoes)*total_de_acertos;
+
+        nota = acertos / total_de_questoes * 10;
+        printf("ALUNO %d:  %.2f\n", i + 1, nota);
+
+        if (nota >= 6.0)
+        {
+            aprovados++;
+        }
     }
-    return nota;
+
+    float porcentagem_de_aprovados = (aprovados / ALUNOS) * 100;
+
+    printf("PORCENTAGEM DE APROVADOS: %.2f %%", porcentagem_de_aprovados);
 }
 
 int main(void)
 {
 
-
     int total_de_questoes;
-    float aluno_aprovado = 0;
-    float porcentagem_aprovacao;
 
     printf("DIGITE O TOTAL DE QUESTÕES: ");
     scanf("%d", &total_de_questoes);
 
     char *gabarito = (char *)malloc(total_de_questoes * sizeof(char));
-    char *resposta_do_aluno = (char *)malloc(total_de_questoes * sizeof(char));
-    float *aluno = (float *)malloc(10*sizeof(float*));
+    char **alunos = (char **)malloc(10 * sizeof(char *));
 
+    for (int i = 0; i < 10; i++)
+    {
+        alunos[i] = (char *)malloc(total_de_questoes * sizeof(char));
+        if (alunos[i] == NULL)
+        {
+            printf("ERRO DE ALOCAÇÃO DE MEMORIA\n");
+            exit(1);
+        }
+    }
 
-    if (gabarito == NULL && resposta_do_aluno == NULL && aluno == NULL)
+    if (gabarito == NULL)
     {
         printf("ERRO DE ALOCAÇÃO DE MEMORIA\n");
         exit(1);
@@ -50,42 +74,29 @@ int main(void)
     printf("------------------------------------\n");
 
     printf("\n");
-    
-    for (int i = 0; i < 10; i++)
+
+    for (int i = 0; i < ALUNOS; i++)
     {
 
-        printf("---------------ALUNO %d--------------\n",i+1);
+        printf("---------------ALUNO %d--------------\n", i + 1);
 
-        for (int i = 0; i < total_de_questoes; i++)
+        for (int j = 0; j < total_de_questoes; j++)
         {
             printf("DIGITE A RESPOSTA DO ALUNO PARA A QUESTÃO %d: ", i + 1);
-            scanf(" %c", &resposta_do_aluno[i]);
-        }
-
-
-        aluno[i] = resultado(gabarito, resposta_do_aluno, total_de_questoes, aluno[i]);
-
-    }
-
-    printf("----------NOTAS DOS ALUNOS----------\n");
-    for (int i = 0; i < 10; i++){
-        printf("ALUNO %d: %.2f\n",1+i, aluno[i]);
-    }
-    printf("------------------------------------\n");
-
-    for(int i = 0; i < 10; i++){
-        if(aluno[i] >= 6.0){
-            aluno_aprovado++;
-
+            scanf(" %c", &alunos[i][j]);
         }
     }
-    
-    porcentagem_aprovacao = (aluno_aprovado / 10.0) * 100.0;
 
-    printf("PORCENTAGEM DE APROVAÇÃO: %.2f%%\n", porcentagem_aprovacao);
 
+    resultado(gabarito, alunos, total_de_questoes);
+
+    free(alunos);
+
+    for (int i = 0; i < 10; i++)
+    {
+        free(alunos[i]);
+    }
     free(gabarito);
-    free(resposta_do_aluno);
-    free(aluno);
+
     return 0;
 }
