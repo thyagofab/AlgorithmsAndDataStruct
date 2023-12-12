@@ -12,10 +12,10 @@ struct servidor{
 
 void preenche(struct servidor *servidor){ //nao vai me retornar nada, pois só vai prencheer os printf.. 
     printf("digite o nome do servidor: ");
-    scanf("%[ ^\n]",servidor ->nome);
+    scanf(" %[ ^\n]",servidor ->nome);
 
     printf("digite a cargo: ");
-    scanf("%[ ^\n]",servidor -> cargo);
+    scanf(" %[ ^\n]",servidor -> cargo);
 
     printf("digite a cpf: ");
     scanf("%d",&servidor -> cpf);
@@ -29,7 +29,11 @@ void preenche(struct servidor *servidor){ //nao vai me retornar nada, pois só v
 }
 
 void imprimir (struct servidor *servidor){
-    printf("nome: %s \n   cpf:  %d \n Email: %s\n cargo: %s \n Salario: %d", servidor -> nome, servidor -> cpf,  servidor -> email, servidor -> cargo, servidor -> salario);
+    printf("Nome: %s\n", servidor ->nome);
+    printf("Cargo: %s\n", servidor ->cargo);
+    printf("CPF:  %d\n", servidor ->cpf);
+    printf("Email: %s\n", servidor ->email);
+    printf("Salario: %d\n", servidor -> salario);
 
 }
 
@@ -39,7 +43,7 @@ void imprimir (struct servidor *servidor){
 //alocação dinâmica de struct pois a variável agora é um ponteiro
 
 int main(){
-    struct servidor *servidor = (struct servidor*) malloc (sizeof(struct servidor));
+    struct servidor *servidor = (struct servidor*) malloc(sizeof(struct servidor));
 
     if (servidor == NULL){
         exit(1);

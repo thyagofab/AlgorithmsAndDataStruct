@@ -208,6 +208,7 @@ pois quando  alocar memória para cada linha individual e, em seguida, armazenar
 
 usando uma matriz;
 
+
 declarando uma matriz; 
 
 char **alunos = (char**) malloc(alunos*sizeof(char*)) // cada linha é os alunos aloquei as linhas
@@ -227,10 +228,11 @@ for(int = 0; i < alunos; i++){
 
 lendo os dados;
 
-for(i = 0; i<n; i++){//representa as linhas quantidade de alunos 
+for(i = 0; i<alunos; i++){//representa as linhas quantidade de alunos 
    printf("aluno %d", i+1);
    for (j = 0; j<n; j++){
       printf("insira a resposta da %d questao", j+1)
+      scanf(" %c", &alunos[i][j]);
    } //é as repostas dos alunos separadamente 
 }
 
