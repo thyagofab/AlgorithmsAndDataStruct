@@ -103,8 +103,9 @@ int main(void){
 
         alterar_Salario(&funcionario[funcionario_escolhido-1]);
 
-
+        printf("------------------------------------\n");
         printf("DADOS DO FUNCIONARIO %d\n",funcionario_escolhido);
+        printf("------------------------------------\n");   
         imprimir(&funcionario[funcionario_escolhido-1]);
    }
 
