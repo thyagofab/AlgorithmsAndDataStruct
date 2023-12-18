@@ -55,7 +55,7 @@ int main(void){
             total_de_pessoas_femininas_que_gostaram_do_produto++;
         }
 
-        else if(vetor_de_resposta_do_tipo_de_sexo[i] == 1 && vetor_de_opinioes[i] == 2){
+        else if(vetor_de_resposta_do_tipo_de_sexo[i] == 1 || vetor_de_opinioes[i] == 2){
             total_de_pessoas_masculinas_que_nao_gostaram++;
 
         }
