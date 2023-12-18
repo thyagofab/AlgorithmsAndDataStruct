@@ -26,7 +26,7 @@ int main(void){
     int *vetor_de_resposta_do_tipo_de_sexo = (int *) malloc(tamanho_do_vetor * sizeof(int));
     int *vetor_de_opinioes = (int *) malloc(tamanho_do_vetor *sizeof(int));
 
-    if(vetor_de_resposta_do_tipo_de_sexo == NULL && vetor_de_opinioes == NULL){
+    if(vetor_de_resposta_do_tipo_de_sexo == NULL || vetor_de_opinioes == NULL){
         printf("ERRO DE LOCAÇÃO DE MEMORIA\n");
         exit(1);
     }
@@ -55,7 +55,7 @@ int main(void){
             total_de_pessoas_femininas_que_gostaram_do_produto++;
         }
 
-        else if(vetor_de_resposta_do_tipo_de_sexo[i] == 1 || vetor_de_opinioes[i] == 2){
+        else if(vetor_de_resposta_do_tipo_de_sexo[i] == 1 && vetor_de_opinioes[i] == 2){
             total_de_pessoas_masculinas_que_nao_gostaram++;
 
         }
