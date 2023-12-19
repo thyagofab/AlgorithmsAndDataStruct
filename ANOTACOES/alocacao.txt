@@ -310,3 +310,11 @@ struct aluno *estudante = (struct aluno*) malloc (sizeof(struct aluno));
 usando uma função;
 
 
+diferença de v[2] para v +2 
+
+v + 2 
+vai imprimir o endereço 
+também serve para acessar o conteúdo *(v + 2) pega conteúdo.
+
+
+v[2] -> pegar o conteúdo de uma vez.
