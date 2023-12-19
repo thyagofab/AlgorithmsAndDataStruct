@@ -10,7 +10,7 @@ ex:
     nesse exemplo, desejamos armazenar valores inteiros nessa área,
     devemos declarar um ponteiro de inteiro para receber o endereço
     inicial do espaço alocado, seja vai ser enviado local da memoria do
-    primeir espaço do vetor.
+    primeiro espaço do vetor.
 
 
 - O Uso do operador sizeof() -> vai acabar me especificando o tanto de byts cada tipo de variavel tem
@@ -64,7 +64,7 @@ seja aumenta ou diminuir o espaço da memoria usada.
 
 uso;
 
-   vetor =(int *) realloc(vetor, novo_tamanho *sizeof(int));
+   vetor = (int *) realloc(vetor, novo_tamanho *sizeof(int));
 
 
 cashe -> é forçar o endereço ser de um tipo
