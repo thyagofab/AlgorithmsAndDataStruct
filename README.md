@@ -7,16 +7,15 @@
 
 ### Descrição
 
-Este repositório contém uma série de códigos desenvolvidos em C para atividades relacionadas a Estrutura de Dados.
+Este repositório abriga uma coleção de códigos escritos em C para as atividades associadas à disciplina de Estrutura de Dados.
 
-O objetivo desse repositório é armazenar minhas atividades durante a disciplina.
+O propósito principal deste repositório é servir como um registro das minhas realizações ao longo do curso.
 
-Cada pasta contém os códigos desenvolvidos durante as atividades relacionadas ao tópico específico.
+Cada diretório engloba os códigos desenvolvidos durante as atividades relacionadas a um tópico específico.
+
 
 ### Lista de pastas
 
-`TADS`
-- maioria das `TADS` criadas durante as unidades.
 
 `Unidade 1`
 
