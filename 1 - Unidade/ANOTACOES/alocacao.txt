@@ -318,3 +318,12 @@ também serve para acessar o conteúdo *(v + 2) pega conteúdo.
 
 
 v[2] -> pegar o conteúdo de uma vez.
+
+
+umion -> na união apenas uma unica variavel é armazenado na memoria 
+
+apenas quando você utiliza um dos valores que está dentro da unin, assim utilizando menos espaços.
+
+então, o espaço sera o do tamanho da maior variavel
+
+principal diferença da struct para union é que o union armazena um tipo de dados por vez
