@@ -41,7 +41,9 @@ int main(void){
     Dados *pessoa = malloc(sizeof(pessoa));
     dados_pessoa(pessoa);
 
-    printf("\n\nNome: %s\n", pessoa->nome);
+
+  printf("-------INFORMAÇÃO DA PESSOA-------\n")
+    printf("Nome: %s\n", pessoa->nome);
     printf("Idade: %d\n", pessoa->idade);
 
     if(pessoa ->op){
