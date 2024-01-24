@@ -38,7 +38,7 @@ void dados_pessoa(Dados *p){
 
 int main(void){
 
-    Dados *pessoa = malloc(sizeof(pessoa));
+    Dados *pessoa = malloc(sizeof(Dados));
     dados_pessoa(pessoa);
 
 

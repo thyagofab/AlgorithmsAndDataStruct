@@ -41,7 +41,7 @@ void Analise_de_produto(Mercadoria *p){
 }
 
 int main(void){
-    Mercadoria *produto = malloc(sizeof(produto));
+    Mercadoria *produto = malloc(sizeof(Mercadoria));
     Analise_de_produto(produto);
 
 
