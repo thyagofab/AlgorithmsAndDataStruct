@@ -116,4 +116,5 @@ int main(void){
     }while(op !=5);
 
     free(registrar_evento);
+    return 0;
 }

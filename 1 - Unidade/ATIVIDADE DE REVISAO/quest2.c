@@ -135,5 +135,5 @@ int main(void){
             free(aluno[i]);
         }
 
-
+        return 0;
 }
