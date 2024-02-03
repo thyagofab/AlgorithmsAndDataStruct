@@ -1,0 +1,35 @@
+tipos abastratos de dados
+
+ideia central 
+- encapsular de quem usa um determinado tipo a forma concreta com que ele foi implementado
+
+modulo serve para encapsular funções. 
+beneficios 
+
+- Descoplamento da implementação do uso 
+- Facilidade de manutenção 
+- aumento do reuso.
+
+modulo
+- Arquivo com funções que representam parte de uma implementação
+- A implementação de um programa pode ser composta por um ou mais módulos
+
+
+pograma composto por vários nódulos 
+
+-  cada um compilado seperadamente (.0 ou obje);
+- O ligador (linker) reúne todos os arquivos objetos em um únicos arquivos executavel 
+
+para programas de médio e grande porte, a sua divisão em vários módulos é fundamental.
+
+
+
+ex: 
+- arquivo str.c para manipulação de strings:
+* comprimento;
+* compilado
+* concatena
+
+- arquivo prog1.c
+
+nos arquivos de c tem que sempre comentar dizer que a função faz. que ela recebe como paramentro e ela retorna.
