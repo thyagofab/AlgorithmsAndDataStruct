@@ -1,3 +1,106 @@
+ARQUUIVOS
+
+a função -> fopen() -> serve para abrir arquivos
+
+Os modos de abertura mais comuns são:
+r: abre um arquivo existente para leitura.
+w: abre um arquivo existente para escrita. Se o arquivo não existir, cria um novo arquivo.
+a: abre um arquivo existente para escrita. Se o arquivo não existir, cria um novo arquivo. As novas informações são adicionadas ao final do arquivo.
+r+: abre um arquivo existente para leitura e escrita.
+w+: abre um arquivo existente para leitura e escrita. Se o arquivo não existir, cria um novo arquivo.
+a+: abre um arquivo existente para leitura e escrita. Se o arquivo não existir, cria um novo arquivo. As novas informações são adicionadas ao final do arquiv
+
+ex:
+    FILE *arquivo;
+    arquivo = fopen("Entrada.txt", "rt");
+
+
+para fechar o arquivo:
+
+fclose() -> fecha no final do programa 
+
+Ler uma caractere do arquivo;
+usa a função fgetc();
+
+para escrever uma caractere no arquivo:
+
+fputc();
+
+ex:
+int fputc(int c, FILE *fp);
+
+fputc('A', fp); // Escreve o caractere 'A' no arquivo apontado por fp
+
+para verificar se final do arquivo foi atingido usa a função:
+
+feof()
+ex:
+
+int feof(fp);
+
+assim que usa para verificar arquivo todo até final da ultima linha.
+
+    while (!feof(fp)) { // Enquanto não chegar ao final do arquivo
+        c = fgetc(fp); // Lê um caractere do arquivo
+        printf("%c", c); // Imprime o caractere lido
+    }
+
+função para ler linha por linha:
+
+fgets();
+
+ex:
+O primeiro parâmetro é um ponteiro para uma string que será usada para armazenar a linha lida. O segundo parâmetro é o número máximo de caracteres que podem ser lidos. O terceiro parâmetro é um ponteiro para o arquivo que será lido.
+char *fgets(char *str, int n, FILE *fp);
+
+
+para escrever dentro de um arquivo usa:
+
+fputs();
+
+ex:
+int fputs(const char *str, FILE *fp);
+O primeiro parâmetro é a string que será escrita.
+ fputs("Hello World!", fp); 
+
+ função fprintf()
+  é usada para escrever uma string formatada em um arquivo
+
+  A função fscanf() é usada para ler uma string formatada de um arquivo.
+  O primeiro parâmetro é um ponteiro para o arquivo que será lido. O segundo parâmetro é a string formatada que será lida.
+
+    fscanf(fp, "%s", str); // Lê uma string formatada do arquivo fp e armazena na string str
+     printf("%s", str); // Imprime a string lida
+     
+
+EOF -> significa "End of file",  usado para indicar o fim do arquivo 
+ 
+nas condições sempre usa eof com outra atribuição
+nunca dar para usar diretamente ele.
+
+Quando você usa fscanf em um loop while, o EOF não deve ser usado diretamente 
+na condição do loop. Em vez disso, você verifica o retorno da 
+função fscanf para determinar se a leitura foi bem-sucedida e se 
+não alcançou o final do arquivo.
+
+
+uma aplicação basica do fscanf com eof:
+
+o EOF  certifica que o arquivo está sendo lido até o final.
+
+while (fscanf(entrada_q1, "%19[^\t]%*[\t]%f%f%f", nome, &nota1, &nota2, &nota3) != EOF) {
+        media = (nota1 + nota2 + nota3) / 3;
+
+        printf("Nome: %s, Nota 1: %.1f, Nota 2: %.1f, Nota 3: %.1f, Média: %.1f\n", nome, nota1, nota2, nota3, media); // esse printf foi feito para verificar se foi feito a leitura dos dados!
+        fprintf(saida_q1, "%s\t%.1f\t%s\n", nome, media, (media >= 7.0) ? "aprovado" : "reprovado"); // aqui está escrevendo no arquivo de saida cada resultado.
+
+fprintf -> está transcrevendo no outro arquivo.
+    }
+
+negocio muito importante está ficado ligado é isso:
+%19[^\t]%*[\t]%f%f%f -> formatação das linhas no arquivo.
+
+
 tipos abastratos de dados
 
 ideia central 
