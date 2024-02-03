@@ -27,7 +27,7 @@ int main(void){
     maior = vetor[0];
     menor = vetor[0];
 
-    for (int i = 0; i < 9; i++){
+    for (int i = 0; i < 10; i++){
         if(vetor[i] > maior){
             maior = vetor[i];
         }
