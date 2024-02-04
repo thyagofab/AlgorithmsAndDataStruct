@@ -37,4 +37,4 @@ Cada diretório engloba os códigos desenvolvidos durante as atividades relacion
 
 - `Manipulação de arquivos:` Atividades sobre manipular arquivos.
 
-- `Tipos abstratos de dados:`Atividades relacionadas ao Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas.
+- `Tipos abstratos de dados:`Atividades relacionadas aos Tipos Abstratos de Dados (TADs)
