@@ -32,3 +32,9 @@ Cada diretório engloba os códigos desenvolvidos durante as atividades relacion
 - `Tipos estruturados:` Atividade sobre tipos estruturados.
 
 - `Union e Enum:` Atividades específicas sobre o uso de Union e Enum.
+
+`Unidade 2`
+
+- `Manipulação de arquivos:` Atividades sobre manipular arquivos em C.
+
+- `Tipos abstratos de dados:` Atividades sobre TADS em C.
