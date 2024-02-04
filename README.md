@@ -35,6 +35,6 @@ Cada diretório engloba os códigos desenvolvidos durante as atividades relacion
 
 `Unidade 2`
 
-- `Manipulação de arquivos:` Atividades sobre manipular arquivos em C.
+- `Manipulação de arquivos:` Atividades sobre manipular arquivos.
 
-- `Tipos abstratos de dados:` Atividades sobre TADS em C.
+- `Tipos abstratos de dados:` Atividades sobre TADS.
