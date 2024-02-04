@@ -1,0 +1,12 @@
+Aluno 1  
+ Nome lcuas 
+ Notas: 10.00 3.00 8.00 
+ Media: 7.00
+Aluno 2  
+ Nome thallys 
+ Notas: 10.00 9.00 3.00 
+ Media: 7.33
+Aluno 3  
+ Nome matiel 
+ Notas: 10.00 7.00 5.00 
+ Media: 7.33

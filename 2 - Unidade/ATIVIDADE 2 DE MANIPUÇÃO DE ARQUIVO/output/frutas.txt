@@ -1,0 +1,4 @@
+Nome da fruta: ABACAXI 
+ Preço: 10.50 
+Nome da fruta: ABACATE 
+ Preço: 5.00 
