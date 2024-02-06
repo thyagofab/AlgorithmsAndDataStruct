@@ -9,7 +9,7 @@ int main(void){
 
     FILE *arquivo_dados;
 
-    arquivo_dados = fopen("arquivo_dados.txt","w");
+    arquivo_dados = fopen("arquivo_dados.txt","aw");
 
     if(arquivo_dados == NULL){
         printf("Erro na abertura do arquivo");

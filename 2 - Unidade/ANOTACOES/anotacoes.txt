@@ -136,3 +136,15 @@ ex:
 - arquivo prog1.c
 
 nos arquivos de c tem que sempre comentar dizer que a função faz. que ela recebe como paramentro e ela retorna.
+
+
+TAD: Tipo abstratos de dados.
+
+para compilar
+primeiro vem tad 
+e depois o arquivo das funções
+
+para compilar direto do vs code 
+coloque ponto c para compilar normal do vscode
+
+no arquivo principal.

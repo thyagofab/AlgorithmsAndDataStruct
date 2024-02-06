@@ -9,7 +9,7 @@ typedef struct Loja{
 int main(void){
     int op;
     frutas loja;
-    FILE *arquivo_frutas = fopen("frutas.txt","w");
+    FILE *arquivo_frutas = fopen("frutas.txt","aw");
 
     if(arquivo_frutas == NULL){
         printf("Erro na abertura de arquivo!");

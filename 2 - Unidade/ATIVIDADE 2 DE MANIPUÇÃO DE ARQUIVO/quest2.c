@@ -10,7 +10,7 @@ typedef struct Turma{
 
 int main(void){
     int total;
-    FILE *arquivo_dados2 = fopen("arquivos_dados2.txt","w");
+    FILE *arquivo_dados2 = fopen("arquivos_dados2.txt","aw");
     if(arquivo_dados2 ==NULL){
         printf("ERRO DE CRIAR O ARQUIVO\n");
         exit(1);
