@@ -21,6 +21,7 @@ int main(void){
     busca_elemento_lista(lista_encadeada, 3);
     // elemento não está na lista
     busca_elemento_lista(lista_encadeada, 4);
+    
 
     return 0;
 }

@@ -1,0 +1,14 @@
+Void bubblesort(int array[],int n){
+    int i , j
+    for (i = 0; i < n-1; i++ ){
+        for(j = 0; j < n - 1 -i; j++){
+            if (arr[j] > arr [ j + 1])
+                swap(&arry[j], &arr[j + 1]);
+        }
+    }
+}
+
+a complexidade desse algoritmo em melhor e pior caso 
+é sempre O(n^2)
+
+e já do espaço O(1)
